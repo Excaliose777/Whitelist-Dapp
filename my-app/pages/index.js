@@ -49,9 +49,6 @@ export default function Home() {
     return web3Provider;
   };
 
-  /**
-   * addAddressToWhitelist: Adds the current connected address to the whitelist
-   */
   const addAddressToWhitelist = async () => {
     try {
       // We need a Signer here since this is a 'write' transaction.
@@ -77,9 +74,6 @@ export default function Home() {
     }
   };
 
-  /**
-   * getNumberOfWhitelisted:  gets the number of whitelisted addresses
-   */
   const getNumberOfWhitelisted = async () => {
     try {
       // Get the provider from web3Modal, which in our case is MetaMask
@@ -172,9 +166,6 @@ export default function Home() {
     }
   };
 
-  // useEffects are used to react to changes in state of the website
-  // The array at the end of function call represents what state changes will trigger this effect
-  // In this case, whenever the value of `walletConnected` changes - this effect will be called
   useEffect(() => {
     // if wallet is not connected, create a new instance of Web3Modal and connect the MetaMask wallet
     if (!walletConnected) {
